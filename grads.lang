@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!-- GrADS GTKSourceView Language File
+    Hastily assembled by Warren Pettee
+    Install in ~/.local/share/gtksourceview-3.0/language-specs for personal use
+    Install in /usr/local/share/gtksourceview-3.0/language-specs for system-wide use
+    -->
+    <language id="grads" _name="GrADs" version="2.0" _section="Script">
+        <metadata>
+            <property name="mimetypes">text/x-grads</property>
+            <property name="globs">*.gs</property>
+            <property name="line-comment-start">*</property>
+        </metadata>
+        <styles>
+            <style id="comment" _name="Comment" map-to="def:comment"/>
+            <style id="string" _name="String" map-to="def:string"/>
+            <style id="keyword" _name="Keyword" map-to="def:keyword"/>
+        </styles>
+        <definitions>
+            <context id="grads">
+                <include>
+                    <context id="comment" style-ref="comment">
+                        <start>^\s*\*</start>
+                        <end>$</end>
+                    </context>            
+                    <context id="string-quote" style-ref="string">
+                        <start>'</start>
+                        <end>'</end>
+                    </context>
+                    
+                    <context id="keywords" style-ref="keyword">
+                        <keyword>say</keyword>
+                        <keyword>prompt</keyword>
+                        <keyword>pull</keyword>
+                        <keyword>if</keyword>
+                        <keyword>else</keyword>
+                        <keyword>endif</keyword>
+                        <keyword>while</keyword>
+                        <keyword>endwhile</keyword>
+                        <keyword>function</keyword>
+                        <keyword>return</keyword>
+                        <keyword>strlen</keyword>
+                        <keyword>sublin</keyword>
+                        <keyword>subwrd</keyword>
+                        <keyword>substr</keyword>
+                        <keyword>read</keyword>
+                        <keyword>write</keyword>
+                        <keyword>close</keyword>
+                        <keyword>sys</keyword>
+                        <keyword>query</keyword>
+                        <keyword>set</keyword>
+                        <keyword>swap</keyword>
+                        <keyword>aave</keyword>
+                        <keyword>ave</keyword>
+                        <keyword>vint</keyword>
+                        <keyword>abs</keyword>
+                        <keyword>acos</keyword>
+                        <keyword>asin</keyword>
+                        <keyword>atan2</keyword>
+                        <keyword>cos</keyword>
+                        <keyword>exp</keyword>
+                        <keyword>log</keyword>
+                        <keyword>log10</keyword>
+                        <keyword>pow</keyword>
+                        <keyword>sin</keyword>
+                        <keyword>sqrt</keyword>
+                        <keyword>tan</keyword>
+                        <keyword>const</keyword>
+                        <keyword>maskout</keyword>
+                        <keyword>skip</keyword>
+                        <keyword>smth9</keyword>
+                        <keyword>hcurl</keyword>
+                        <keyword>hdivg</keyword>
+                        <keyword>mag</keyword>
+                        <keyword>gr2stn</keyword>
+                        <keyword>oacres</keyword>
+                        <keyword>stnave</keyword>
+                        <keyword>stnmin</keyword>
+                        <keyword>stnmax</keyword>
+                        <keyword>cdiff</keyword>
+                        <keyword>tloop</keyword>
+                        <keyword>tvrh2q</keyword>
+                        <keyword>tvrh2t</keyword>
+                        <keyword>open</keyword> 
+                    </context>
+                </include>
+            </context>
+        </definitions>
+    </language>
